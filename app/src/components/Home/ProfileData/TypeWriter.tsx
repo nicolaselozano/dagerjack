@@ -1,17 +1,18 @@
 import { useEffect, useState } from "react";
 
-const Typewriter: React.FC = () => {
-  const phrases = ["Dot Dager", "pepino", "c# > Java", "boooooooca"];
+const Typewriter = ({sentences,flashSenteces}) => {
+  const phrases = sentences;
   const [displayText, setDisplayText] = useState("");
   const [isTyping, setIsTyping] = useState(true);
   const [index, setIndex] = useState(0);
   const [currentPhraseIndex, setCurrentPhraseIndex] = useState(0);
+  const [reset, setReset] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
   const [cursorVisible, setCursorVisible] = useState(true);
 
   useEffect(() => {
     const currentPhrase = phrases[currentPhraseIndex];
-    const isQuickErase = currentPhrase === "pepino" || currentPhrase === "boooooooca" || currentPhrase === "c# > Java";
+    const isQuickErase = flashSenteces.includes(currentPhrase);
     const typingSpeed = Math.random() * 150 + 50;
     const eraseSpeed = isQuickErase ? 50 : Math.random() * 150 + 50;
 
@@ -39,7 +40,14 @@ const Typewriter: React.FC = () => {
           setIndex((prevIndex) => prevIndex - 1);
         } else {
           const nextPhraseIndex = (currentPhraseIndex + Math.floor(Math.random() * phrases.length)) % phrases.length;
+          if(reset >= 3){
+            setReset(0);
+            setCurrentPhraseIndex(0);
+            setIsTyping(true);
+            return;
+          }
           setCurrentPhraseIndex(nextPhraseIndex);
+          setReset(reset + 1);
           setIsTyping(true);
         }
       }

@@ -1,3 +1,4 @@
+import React from "react";
 import CardContent from "./CardContent";
 
 import image1 from "../../../../public/content_2.gif";
@@ -16,6 +17,8 @@ const MyContent: React.FC = () => {
       link: "https://www.youtube.com/@DotDager",
       altText: "Video 1",
       description: "Directos",
+      detailedDescription:
+        "Aquí puedes encontrar directos y mucha joda",
     },
     {
       staticImage: imagej2,
@@ -23,6 +26,8 @@ const MyContent: React.FC = () => {
       link: "https://www.youtube.com/@DotDager",
       altText: "Video 2",
       description: "Parodias",
+      detailedDescription:
+        "Disfruta de las mejores parodias creadas con humor único e ironico.",
     },
     {
       staticImage: imagej3,
@@ -30,15 +35,19 @@ const MyContent: React.FC = () => {
       link: "https://www.youtube.com/@DotDager",
       altText: "Video 3",
       description: "Desarrollo",
+      detailedDescription:
+        "No sabes centrar un div?, yo tampoco, pero podemos ver juntos como :D",
     },
   ];
 
   return (
-    <div className="m-16 flex flex-row justify-center bg-display_menu p-10 rounded-lg shadow-lg">
+    <div className="m-16 flex flex-row justify-center bg-display_menu bg-opacity-25 p-10 rounded-lg shadow-lg relative">
       {cards.map((card, index) => (
         <div
           key={index}
-          className="mx-7 bg-cards_bg rounded-lg p-4 hover:shadow-2xl hover:animate-breathe transition duration-300"
+          className="mx-7 bg-cards_bg bg-opacity-65 rounded-lg p-4 
+          border-2 border-purple-800
+          hover:shadow-2xl hover:animate-breathe transition duration-300"
         >
           <CardContent {...card} />
         </div>

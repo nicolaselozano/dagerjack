@@ -13,21 +13,41 @@ const ProfileData: React.FC = () => {
 
     setHovered(set);
   };
+
+  const handleScroll = () => {
+    const section = document.getElementById("follow");
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const handleScrollContact = () => {
+    const section = document.getElementById("contact");
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
     <div className="relative flex flex-row justify-between w-full">
       {/* Información del perfil */}
       <div className="text-left h-[60vh]">
-        <Typewriter/>
+        <Typewriter
+          sentences={["Dot Dager", "pepino", "c# > Java", "boooooooca"]}
+          flashSenteces={["pepino", "c# > Java", "boooooooca"]}
+        />
         <p>
-          Senior full-stack/lead software developer with a passion <br /> for
-          SOLID code and amazing products.
+          Full-stack senior y contador serial de chistes con altura. <br /> C# Enjoyer
         </p>
 
         <ButtonHome classname="w-[25vh]">
-          <span>Sigueme aquí</span>
+          <a onClick={handleScroll}>
+            <span>Sigueme aquí</span>
+          </a>
         </ButtonHome>
         <ButtonHome classname="w-[25vh] ml-4">
-          <span>Contactame</span>
+          <a onClick={handleScrollContact}>
+            <span>Contactame</span>
+          </a>
         </ButtonHome>
       </div>
       <a href="https://tbot.xyz/lumber/" target="_blank">

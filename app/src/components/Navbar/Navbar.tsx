@@ -4,10 +4,13 @@ import React, { useState } from "react";
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const list = [
-    { name: 'LumberJack', url: 'https://lumberjack.com' },
-    { name: 'Youtube', url: 'https://youtube.com' },
-    { name: 'Github', url: 'https://github.com' },
-    { name: 'Instagram', url: 'https://instagram.com' }
+    { name: "LumberJack", url: "https://tbot.xyz/lumber/" },
+    { name: "Youtube", url: "https://www.youtube.com/@DotDager" },
+    { name: "Github", url: "https://github.com/MarianoVilla" },
+    { name: "Instagram", url: "https://www.instagram.com/dager.32/" },
+    { name: "Twitter/X", url: "https://twitter.com/Dager_32" },
+    { name: "TikTok", url: "https://www.tiktok.com/@elantrodedager" },
+    { name: "¿Como centrar un div?", url: "https://stackoverflow.com/questions/2281087/center-a-div-in-css" },
   ];
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -15,14 +18,14 @@ const Navbar: React.FC = () => {
 
   return (
     <nav className="h-[10vh] bg-cards_bg flex flex-row justify-between items-center">
-                  <div
-              className={`fixed top-[10vh] left-0 w-screen h-screen bg-black bg-opacity-45 z-10
+      <div
+        className={`fixed top-[10vh] left-0 w-screen h-screen bg-black bg-opacity-45 z-10
               ${
                 isOpen
                   ? "translate-x-0 opacity-100"
                   : "translate-x-full opacity-0"
               }`}
-            ></div>
+      ></div>
       <div className="mx-10 w-[100%] flex flex-row justify-between items-center">
         <div>
           <h1 className="text-2xl font-bold">{`namespace Dot.Dager;`}</h1>
@@ -60,15 +63,15 @@ const Navbar: React.FC = () => {
                 : "translate-x-full opacity-0"
             }`}
           >
-
             <ul>
               {list.map((item, index) => (
-                <li
-                  key={index}
-                  className={`px-4 py-2 text-white hover:bg-cards_bg hover:cursor-pointer transition-transform duration-300`}
-                >
-                  {item.name}
-                </li>
+                <a key={index} href={item.url} target="_blank">
+                  <li
+                    className={`px-4 py-2 text-white hover:bg-cards_bg hover:cursor-pointer transition-transform duration-300`}
+                  >
+                    {item.name}
+                  </li>
+                </a>
               ))}
             </ul>
           </div>

@@ -3,7 +3,7 @@ import Image from "next/image";
 import profilePFP from "../../../public/pfp_derger.svg";
 
 const Background: React.FC = () => {
-    const imageCount = 20;
+    const imageCount = 50;
   
     return (
       <div className="fixed top-0 left-0 flex flex-col justify-around overflow-hidden h-screen">

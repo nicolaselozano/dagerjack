@@ -7,6 +7,7 @@ export interface HoverCard {
   altText: string;
   link: string;
   description: string;
+  detailedDescription: string;
 }
 
 const CardContent: React.FC<HoverCard> = ({
@@ -15,22 +16,23 @@ const CardContent: React.FC<HoverCard> = ({
   altText,
   link,
   description,
+  detailedDescription,
 }) => {
   const [isHovered, setIsHovered] = useState(false);
 
-  const handleHover = (i) => {
-    setIsHovered(i);
-  };
-
   return (
-    <a href={link}>
-      <div 
-       className="hover:scale-105">
-        <div
-          className="hover-card w-80 h-44 overflow-hidden rounded-lg shadow-lg"
-          onMouseEnter={ () => handleHover(true)}
-          onMouseLeave={() => handleHover(false)}
-        >
+    <div
+      className="relative"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      <a
+        href={link}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="hover:scale-105 transition-transform duration-300"
+      >
+        <div className="hover-card w-80 h-44 overflow-hidden rounded-lg shadow-lg">
           <Image
             src={isHovered ? gifImage : staticImage}
             alt={altText}
@@ -40,9 +42,17 @@ const CardContent: React.FC<HoverCard> = ({
             className="w-full h-full object-cover hover:cursor-pointer"
           />
         </div>
-        <h1 className="text-4xl font-bold">{description}</h1>
-      </div>
-    </a>
+        <h1 className="text-4xl font-bold mt-2">{description}</h1>
+      </a>
+
+      {isHovered && (
+        <>
+          <div className="absolute top-full mt-2 left-1/2 transform -translate-x-1/2 bg-white p-4 w-96 rounded-lg shadow-xl z-20">
+            <p className="text-gray-800 text-center">{detailedDescription}</p>
+          </div>
+        </>
+      )}
+    </div>
   );
 };
 
