@@ -1,7 +1,6 @@
 "use client";
 import React, { useRef } from "react";
 
-import Carrusel from "./Carrusel/Carrusel";
 import ProfileData from "./ProfileData/ProfileData";
 import ButtonHome from "./Button/ButtonHome";
 import MyContent from "./MyContent/MyContent";

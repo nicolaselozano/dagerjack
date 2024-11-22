@@ -8,7 +8,7 @@ import Typewriter from "./TypeWriter";
 
 const ProfileData: React.FC = () => {
   const [hovered, setHovered] = useState(false);
-  const toggleHovered = (set) => {
+  const toggleHovered = (set:boolean) => {
     console.log("hola");
 
     setHovered(set);
