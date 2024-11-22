@@ -31,7 +31,7 @@ const ContactForm = () => {
   return (
     <div className="min-h-screen bg-display_menu 
     rounded-b-lg
-     flex flex-col items-center justify-center px-4">
+     flex flex-col items-center justify-center rounded-lg px-4 py-4">
       <h2 className="text-4xl font-bold mb-8 text-white">
         Contactame
       </h2>
@@ -51,7 +51,7 @@ const ContactForm = () => {
             value={formData.name}
             onChange={handleChange}
             required
-            placeholder="Escribe tu nombre"
+            placeholder="Pepito01"
             className="w-full px-4 py-3 bg-display_menu text-white rounded-lg shadow focus:outline-none focus:ring-2 focus:ring-cards_bg"
           />
         </div>
@@ -68,7 +68,7 @@ const ContactForm = () => {
             value={formData.email}
             onChange={handleChange}
             required
-            placeholder="Escribe tu email"
+            placeholder="pepito@gmail.copado"
             className="w-full px-4 py-3 bg-display_menu text-white rounded-lg shadow focus:outline-none focus:ring-2 focus:ring-cards_bg"
           />
         </div>
@@ -84,7 +84,7 @@ const ContactForm = () => {
             value={formData.message}
             onChange={handleChange}
             required
-            placeholder="Escribe tu mensaje"
+            placeholder="Larga vida al pepino, AVE PEPINO!!!"
             className="w-full px-4 py-3 bg-display_menu text-white rounded-lg shadow focus:outline-none focus:ring-2 focus:ring-cards_bg"
             rows={4}
           ></textarea>

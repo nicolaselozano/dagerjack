@@ -14,7 +14,7 @@ const MyContent: React.FC = () => {
     {
       staticImage: imagej1,
       gifImage: image1.src,
-      link: "https://www.youtube.com/@DotDager",
+      link: "https://www.youtube.com/@DotDager/streams",
       altText: "Video 1",
       description: "Directos",
       detailedDescription:
@@ -23,16 +23,16 @@ const MyContent: React.FC = () => {
     {
       staticImage: imagej2,
       gifImage: image2.src,
-      link: "https://www.youtube.com/@DotDager",
+      link: "https://www.youtube.com/watch?v=f9JwsSxp5NQ",
       altText: "Video 2",
       description: "Parodias",
       detailedDescription:
-        "Disfruta de las mejores parodias creadas con humor único e ironico.",
+        "Parodias con humor único e ironico.",
     },
     {
       staticImage: imagej3,
       gifImage: image3.src,
-      link: "https://www.youtube.com/@DotDager",
+      link: "https://www.youtube.com/watch?v=FNNvUP2ocR4&t=10106s",
       altText: "Video 3",
       description: "Desarrollo",
       detailedDescription:
@@ -41,11 +41,11 @@ const MyContent: React.FC = () => {
   ];
 
   return (
-    <div className="m-16 flex flex-row justify-center bg-display_menu bg-opacity-25 p-10 rounded-lg shadow-lg relative">
+    <div className="m-16 flex flex-row justify-center bg-display_menu p-10 rounded-lg shadow-lg relative">
       {cards.map((card, index) => (
         <div
           key={index}
-          className="mx-7 bg-cards_bg bg-opacity-65 rounded-lg p-4 
+          className="mx-7 bg-[#1a1a1a] bg-opacity-65 rounded-lg p-4 
           border-2 border-purple-800
           hover:shadow-2xl hover:animate-breathe transition duration-300"
         >

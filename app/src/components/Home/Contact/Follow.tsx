@@ -2,7 +2,7 @@ import { FaInstagram, FaTwitter, FaYoutube, FaTiktok, FaGithub } from "react-ico
 
 const Follow = () => {
   return (
-    <div className="bg-display_menu p-6 rounded-t-lg shadow-lg text-white">
+    <div className="bg-display_menu p-6 rounded-lg shadow-lg text-white">
       <h2 className="text-2xl font-bold mb-4 text-center">Sígueme en</h2>
       <div className="flex justify-around items-center space-x-6">
       <a

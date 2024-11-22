@@ -20,8 +20,8 @@ export default {
         "cards_bg": "#52317D",
       },
       animation: {
-        'scroll-left': 'scrollLeft 30s linear infinite',
-        'scroll-right': 'scrollRight 30s linear infinite',
+        'scroll-left': 'scrollLeft 20s linear infinite',
+        'scroll-right': 'scrollRight 20s linear infinite',
         typewrite: 'typewrite 4s steps(20) infinite, blink 1s step-end infinite',
         breathe: 'breathe 2s infinite ease-in-out',
       },

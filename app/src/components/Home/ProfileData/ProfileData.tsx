@@ -31,8 +31,8 @@ const ProfileData: React.FC = () => {
     <div className="relative flex flex-row justify-between w-full">
       <div className="text-left h-[60vh]">
         <Typewriter
-          sentences={["Dot Dager", "pepino", "c# > Java", "boooooooca"]}
-          flashSenteces={["pepino", "c# > Java", "boooooooca"]}
+          sentences={["Dot Dager", "pepino", "c# > Java", "boooooooca",". Dager"]}
+          flashSenteces={["pepino", "c# > Java", "boooooooca",". Dager"]}
         />
         <p>
           Full-stack senior y contador serial de chistes con altura. <br /> C# Enjoyer

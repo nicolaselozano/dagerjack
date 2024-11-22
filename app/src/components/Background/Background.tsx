@@ -7,7 +7,6 @@ const Background: React.FC = () => {
   
     return (
       <div className="fixed top-0 left-0 flex flex-col justify-around overflow-hidden h-screen">
-        {/* Fondo que se mueve a la izquierda */}
         <div className="w-[200%] flex animate-scroll-left z-0 whitespace-nowrap">
           {Array.from({ length: imageCount * 2 }).map((_, index) => (
             <Image
@@ -18,8 +17,7 @@ const Background: React.FC = () => {
             />
           ))}
         </div>
-  
-        {/* Fondo que se mueve a la derecha */}
+
         <div className="w-[200%] -ml-[100%] flex animate-scroll-right z-0 whitespace-nowrap">
           {Array.from({ length: imageCount * 2 }).map((_, index) => (
             <Image

@@ -17,7 +17,7 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <nav className="h-[10vh] bg-cards_bg flex flex-row justify-between items-center">
+    <nav className="h-[10vh] bg-[#1a1a1a] flex flex-row justify-between items-center">
       <div
         className={`fixed top-[10vh] left-0 w-screen h-screen bg-black bg-opacity-45 z-10
               ${

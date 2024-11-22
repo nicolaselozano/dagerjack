@@ -35,21 +35,29 @@ const HomeProfile: React.FC = () => {
       </div>
 
       <div>
-        <hr
-          className="flex flex-col justify-around items-center
-      h-px my-40 bg- border-1 dark:bg-gray-700"
-        />
-        <h1  ref={carruselRef} className="text-3xl my-[5vh] underline">Hago contenido sobre:</h1>
+        <div ref={carruselRef}>
+          <hr
+            className="flex flex-col justify-around items-center
+      h-px my-20 bg- border-1 dark:bg-gray-700"
+          />
+        </div>
+
+        <h1 className="text-3xl my-[5vh] underline">Hago contenido sobre:</h1>
         <div>
           <MyContent />
         </div>
       </div>
-
-      <div id="follow"
-      className="mt-[20vh]">
+      <hr
+        className="flex flex-col justify-around items-center
+      h-px my-[10vh] border-1 dark:bg-gray-700"
+      />
+      <div id="follow" className="mt-[10vh]">
         <Follow />
       </div>
-
+      <hr
+        className="flex flex-col justify-around items-center
+      h-px my-[10vh] border-1 dark:bg-gray-700"
+      />
       <div id="contact">
         <ContactForm />
       </div>
