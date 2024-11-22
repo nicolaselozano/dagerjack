@@ -1,30 +1,57 @@
+import React, { useState } from "react";
 import Image from "next/image";
 import profilePFP from "../../../../public/pfp.webp";
 import ButtonHome from "../Button/ButtonHome";
+import Lumber1 from "../../../../public/jack1.png";
+import Lumber2 from "../../../../public/jack2.png";
+import Typewriter from "./TypeWriter";
 
-const ProfileData = () => {
+const ProfileData: React.FC = () => {
+  const [hovered, setHovered] = useState(false);
+  const toggleHovered = (set) => {
+    console.log("hola");
+
+    setHovered(set);
+  };
   return (
-    <div className="flex justify-center">
+    <div className="relative flex flex-row justify-between w-full">
+      {/* Información del perfil */}
+      <div className="text-left h-[60vh]">
+        <Typewriter/>
+        <p>
+          Senior full-stack/lead software developer with a passion <br /> for
+          SOLID code and amazing products.
+        </p>
+
+        <ButtonHome classname="w-[25vh]">
+          <span>Sigueme aquí</span>
+        </ButtonHome>
+        <ButtonHome classname="w-[25vh] ml-4">
+          <span>Contactame</span>
+        </ButtonHome>
+      </div>
+      <a href="https://tbot.xyz/lumber/" target="_blank">
+        <div
+          onMouseEnter={() => toggleHovered(true)}
+          onMouseLeave={() => toggleHovered(false)}
+          style={{
+            pointerEvents: "all",
+          }}
+          className={`absolute object-cover w-[30px] -top-3 right-36 transition-transform duration-300 ease-in-out ${
+            hovered ? "translate-y-[-10px] cursor-pointer" : "animate-breathe"
+          }`}
+        >
+          <Image src={hovered ? Lumber2 : Lumber1} alt="Lumberjack" />
+        </div>
+      </a>
+
       <div>
-        <div className="absolute rounded-full shadow-lg overflow-hidden w-[60vh] h-[60vh]">
+        <div className="relative w-[60vh] h-[60vh] rounded-full shadow-lg overflow-hidden">
           <Image
             src={profilePFP}
             alt="Profile Image"
-            className="object-cover"
+            className="absolute inset-0 object-cover w-full h-full"
           />
-        </div>
-        <div className="ml-[70vh] text-left h-[60vh]">
-          <h1>Dot Dager</h1>
-          <h2>Senior Software Developer/influencer/musico/filosofo</h2>
-          <div className="flex flex-row"></div>
-          <p>{`C# <3`}</p>
-
-          <ButtonHome classname="w-[25vh] bg-black">
-            <span>Sigueme aquí</span>
-          </ButtonHome>
-          <ButtonHome classname="w-[25vh ml-4 bg-black">
-            <span>Cantactame</span>
-          </ButtonHome>
         </div>
       </div>
     </div>

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import { Fira_Code } from "next/font/google";
 import "./globals.css";
 import Background from "@/components/Background/Background";
 
@@ -7,6 +8,12 @@ const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
   weight: "100 900",
+});
+const firaCode = Fira_Code({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-fira-code",
+  display: "swap",
 });
 const geistMono = localFont({
   src: "./fonts/GeistMonoVF.woff",
@@ -27,7 +34,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${firaCode.variable} antialiased`}
+        style={{ fontFamily: "var(--font-fira-code)" }}
       >
         {/* Fondo siempre detrás */}
         <div className="fixed top-0 left-0 w-full h-full z-0">

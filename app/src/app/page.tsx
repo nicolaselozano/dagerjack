@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <div>
       <Navbar />
-      <main>
+      <main className="z-0">
         <HomeProfile />
       </main>
       <Footer />
