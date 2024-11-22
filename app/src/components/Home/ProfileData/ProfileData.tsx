@@ -29,7 +29,6 @@ const ProfileData: React.FC = () => {
   };
   return (
     <div className="relative flex flex-row justify-between w-full">
-      {/* Información del perfil */}
       <div className="text-left h-[60vh]">
         <Typewriter
           sentences={["Dot Dager", "pepino", "c# > Java", "boooooooca"]}

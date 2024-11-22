@@ -55,7 +55,6 @@ const Navbar: React.FC = () => {
               </svg>
             </button>
           </div>
-          {/* Menu desplegable */}
           <div
             className={`absolute z-50 top-[10vh] right-0 w-[100%] bg-display_menu shadow-lg overflow-hidden transition-all duration-300 ${
               isOpen
