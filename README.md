@@ -1,6 +1,6 @@
 # 🚀 **Landing Page - Dot Dager** 🎤
 
-Bienvenido/a al repositorio de la **landing page** de un influencer de programación. Combina comedia con streams llenos de programación y sarcasmo.
+Bienvenido/a al repositorio de la **landing page** de un influencer de programación.
 
 La landing page está diseñada para captar su esencia única y atraer a su comunidad de seguidores, mostrando una mezcla de programación, memes y un estilo auténtico.
 
