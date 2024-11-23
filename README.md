@@ -20,6 +20,10 @@ La landing page está diseñada para captar su esencia única y atraer a su comu
 
 ---
 
+## 🚀 **Deploy**
+
+- [**Firebase Hosting**](https://dagerproyect.web.app/)
+
 ## 🚧 **Instalación y ejecución local**
 
 Si deseas explorar o contribuir al proyecto, sigue estos pasos:
