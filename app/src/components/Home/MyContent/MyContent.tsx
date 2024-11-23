@@ -36,8 +36,8 @@ const MyContent: React.FC = () => {
       altText: "Video 3",
       description: "Desarrollo",
       detailedDescription:
-        "Sabes centrar un div? Yo tampoco.",
-      spoiler:"que esperabas, un remate?"
+        "Sabes centrar un div?",
+      spoiler:"que esperabas, un remate? Es posta"
     },
   ];
 
