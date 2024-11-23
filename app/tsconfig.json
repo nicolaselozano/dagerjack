@@ -1,5 +1,11 @@
 {
   "compilerOptions": {
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "strict": true,
+    "target": "esnext",
+    "module": "commonjs",
+    "lib": ["esnext"],
     "target": "ES2017",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Image, { StaticImageData } from "next/image";
+import SpoilerText from "./SpoilerText";
 
 export interface HoverCard {
   staticImage: StaticImageData | string;
@@ -8,6 +9,7 @@ export interface HoverCard {
   link: string;
   description: string;
   detailedDescription: string;
+  spoiler?: string;
 }
 
 const CardContent: React.FC<HoverCard> = ({
@@ -17,6 +19,7 @@ const CardContent: React.FC<HoverCard> = ({
   link,
   description,
   detailedDescription,
+  spoiler,
 }) => {
   const [isHovered, setIsHovered] = useState(false);
 
@@ -46,11 +49,14 @@ const CardContent: React.FC<HoverCard> = ({
       </a>
 
       {isHovered && (
-        <>
+        <div>
           <div className="absolute top-full mt-2 left-1/2 transform -translate-x-1/2 bg-white p-4 w-96 rounded-lg shadow-xl z-20">
             <p className="text-gray-800 text-center">{detailedDescription}</p>
+            {spoiler && (
+              <SpoilerText spoilerContent={spoiler} />
+            )}
           </div>
-        </>
+        </div>
       )}
     </div>
   );

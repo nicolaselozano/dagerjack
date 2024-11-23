@@ -18,7 +18,7 @@ const MyContent: React.FC = () => {
       altText: "Video 1",
       description: "Directos",
       detailedDescription:
-        "Aquí puedes encontrar directos y mucha joda",
+        "Entrá para ver directos y joder con los pibes",
     },
     {
       staticImage: imagej2,
@@ -36,7 +36,8 @@ const MyContent: React.FC = () => {
       altText: "Video 3",
       description: "Desarrollo",
       detailedDescription:
-        "No sabes centrar un div?, yo tampoco, pero podemos ver juntos como :D",
+        "Sabes centrar un div? Yo tampoco.",
+      spoiler:"que esperabas, un remate?"
     },
   ];
 

@@ -18,10 +18,8 @@ const ContactForm = () => {
     e.preventDefault();
     setSubmitted(true);
 
-    // Simula un envío
     console.log("Form data submitted:", formData);
 
-    // Limpiar formulario después del envío
     setTimeout(() => {
       setFormData({ name: "", email: "", message: "" });
       setSubmitted(false);
@@ -33,13 +31,12 @@ const ContactForm = () => {
     rounded-b-lg
      flex flex-col items-center justify-center rounded-lg px-4 py-4">
       <h2 className="text-4xl font-bold mb-8 text-white">
-        Contactame
+        Contacto
       </h2>
       <form
         onSubmit={handleSubmit}
         className="bg-cards_bg p-8 rounded-lg shadow-lg w-full max-w-lg border-2 border-white/10"
       >
-        {/* Nombre */}
         <div className="mb-6">
           <label htmlFor="name" className="block text-white font-medium mb-2">
             Nombre
@@ -51,12 +48,11 @@ const ContactForm = () => {
             value={formData.name}
             onChange={handleChange}
             required
-            placeholder="Pepito01"
+            placeholder="Marcelo"
             className="w-full px-4 py-3 bg-display_menu text-white rounded-lg shadow focus:outline-none focus:ring-2 focus:ring-cards_bg"
           />
         </div>
 
-        {/* Email */}
         <div className="mb-6">
           <label htmlFor="email" className="block text-white font-medium mb-2">
             Email
@@ -68,12 +64,11 @@ const ContactForm = () => {
             value={formData.email}
             onChange={handleChange}
             required
-            placeholder="pepito@gmail.copado"
+            placeholder="agachateytellueve@gmail.com"
             className="w-full px-4 py-3 bg-display_menu text-white rounded-lg shadow focus:outline-none focus:ring-2 focus:ring-cards_bg"
           />
         </div>
 
-        {/* Mensaje */}
         <div className="mb-6">
           <label htmlFor="message" className="block text-white font-medium mb-2">
             Mensaje
@@ -84,13 +79,12 @@ const ContactForm = () => {
             value={formData.message}
             onChange={handleChange}
             required
-            placeholder="Larga vida al pepino, AVE PEPINO!!!"
+            placeholder={`Dame un pepino. La quiero con mayonesa sin kechup y con mostaza. \nAVE PEPINO!!!`}
             className="w-full px-4 py-3 bg-display_menu text-white rounded-lg shadow focus:outline-none focus:ring-2 focus:ring-cards_bg"
             rows={4}
           ></textarea>
         </div>
 
-        {/* Botón Enviar */}
         <button
           type="submit"
           className="w-full bg-display_menu text-display_menu py-3 px-4 rounded-lg hover:bg-display_menu hover:bg-opacity-35 hover:text-white transition-all duration-300"
@@ -99,7 +93,6 @@ const ContactForm = () => {
         </button>
       </form>
 
-      {/* Mensaje de confirmación */}
       {submitted && (
         <div className="mt-6 text-green-400 animate-breathe">
           ¡Gracias! Tu mensaje ha sido enviado.
